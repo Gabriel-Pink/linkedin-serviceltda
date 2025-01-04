@@ -18,10 +18,8 @@ def lambda_handler(event, context):
     linkedin_gateway = LinkedInGateway(headers)
     get_comments_use_case = GetCommentsUseCase(linkedin_gateway)
 
-    # Executando o caso de uso
     comments = get_comments_use_case.execute(url)
 
-    # Retornando a resposta
     return {
         "statusCode": 200,
         "body": json.dumps(comments),
