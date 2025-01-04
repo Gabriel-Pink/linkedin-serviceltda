@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Lambda function with BeautifulSoup4 and Requests.
+
+Globals:
+  Function:
+    Timeout: 10  # Aumenta o timeout para 10 segundos
+    MemorySize: 256  # Ajusta memória para 256MB
+
+    Environment:
+      Variables:
+        ENVIRONMENT: "/var/task/lib" 
+
+Resources:
+  
+
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.lambda_handler
+      Runtime: python3.9
+      Architectures:
+        - x86_64
+      Events:
+        Funcion:
+          Type: Api
+          Properties:
+            Path: /posts
+            Method: get
