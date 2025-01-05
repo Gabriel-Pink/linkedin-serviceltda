@@ -1,11 +1,11 @@
 # Linkedin-ServiceLTDA
 
 ## Índice / Table of Contents
-- [Português](#português)
 - [English](#english)
-
-### Português
-Descrição do projeto em português...
+- [Português](#português)
 
 ### English
 Project description in English...
+
+### Português
+Descrição do projeto em português...
